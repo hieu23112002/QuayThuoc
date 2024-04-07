@@ -56,8 +56,9 @@ public class HomeController extends HttpServlet {
                     double price = Double.parseDouble(request.getParameter("price"));
                     int quantity = Integer.parseInt(request.getParameter("quantity"));
                     String unit = request.getParameter("unit");
+                    double price2 = Double.parseDouble(request.getParameter("price2"));
 
-                    Product pro = new Product(name, des, price, quantity, unit);
+                    Product pro = new Product(name, des, price, quantity, unit,price2);
                     dao.insertProduct(pro);
                     response.sendRedirect("home");
                 }
@@ -79,8 +80,9 @@ public class HomeController extends HttpServlet {
                     double price = Double.parseDouble(request.getParameter("price"));
                     int quantity = Integer.parseInt(request.getParameter("quantity"));
                     String unit = request.getParameter("unit");
+                    double price2 = Double.parseDouble(request.getParameter("price2"));
 
-                    Product pro = new Product(id,name, des, price, quantity, unit);
+                    Product pro = new Product(id,name, des, price, quantity, unit,price2);
                     dao.updateProduct(pro);
                     response.sendRedirect("home");
                 }

@@ -35,11 +35,12 @@
                     <thead>
                         <tr>
 
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
+                            <th>Tên</th>
+                            <th>Chi Tiet</th>                           
+                            <th>So Luong</th>
                             <th>Unit</th>
+                            <th>Giá buôn</th>
+                            <th>Giá l&#x1EBB;</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -49,9 +50,11 @@
 
                                 <td class="text-capitalize">${o.name}</td>
                                 <td class="text-capitalize">${o.description}</td>
-                                <td><fmt:formatNumber value="${o.price}" type="number" pattern="###,###,###" /></td>
+                                
                                 <td>${o.quantity}</td>
                                 <td class="text-capitalize">${o.unit}</td>
+                                <td><fmt:formatNumber value="${o.price2}" type="number" pattern="###,###,###" /></td>
+                                <td><fmt:formatNumber value="${o.price}" type="number" pattern="###,###,###" /></td>
                                 <td>
                                     <a href="home?service=update&id=${o.medicineID}" class="btn btn-primary"><i class="material-icons">&#xE254;</i></a>
                                     <a href="#" onclick="confirmDelete(${o.medicineID})" class="btn btn-danger"><i class="material-icons">&#xE872;</i></a>

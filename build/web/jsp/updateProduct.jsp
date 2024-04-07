@@ -37,19 +37,23 @@
                                     <input id="id" value="${data.medicineID}" name="id" type="text" class="form-control" readonly="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">Name</label>
+                                    <label for="name">Tên</label>
                                     <input id="name" value="${data.name}" name="name" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="des">Description</label>
+                                    <label for="des">Chi Tiet</label>
                                     <input id="des" value="${data.description}" name="des" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="price">Price</label>
+                                    <label for="price">Giá buôn</label>
+                                    <input id="price2" value="${data.price2}" name="price2" type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="price">Giá l&#x1EBB;</label>
                                     <input id="price" value="${data.price}" name="price" type="text" class="form-control" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="quantity">Quantity</label>
+                                    <label for="quantity">So luong</label>
                                     <input id="quantity" value="${data.quantity}" name="quantity" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">

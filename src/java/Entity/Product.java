@@ -15,27 +15,38 @@ public class Product {
     private double Price;
     private int Quantity;
     private String Unit;
+    private double Price2;
 
     public Product() {
     }
 
-    public Product(int MedicineID, String Name, String Description, double Price, int Quantity, String Unit) {
+    public Product(int MedicineID, String Name, String Description, double Price, int Quantity, String Unit, double Price2) {
         this.MedicineID = MedicineID;
         this.Name = Name;
         this.Description = Description;
         this.Price = Price;
         this.Quantity = Quantity;
         this.Unit = Unit;
+        this.Price2 = Price2;
     }
 
-    public Product(String Name, String Description, double Price, int Quantity, String Unit) {
+    public Product(String Name, String Description, double Price, int Quantity, String Unit, double Price2) {
         this.Name = Name;
         this.Description = Description;
         this.Price = Price;
         this.Quantity = Quantity;
         this.Unit = Unit;
+        this.Price2 = Price2;
     }
-    
+
+    public double getPrice2() {
+        return Price2;
+    }
+
+    public void setPrice2(double Price2) {
+        this.Price2 = Price2;
+    }
+
 
     public int getMedicineID() {
         return MedicineID;

@@ -27,8 +27,9 @@ public class ProductDAO extends DBConnect {
                 + "           ,[Description]\n"
                 + "           ,[Price]\n"
                 + "           ,[Quantity]\n"
-                + "           ,[Unit])\n"
-                + "     VALUES(?,?,?,?,?)";
+                + "           ,[Unit]\n"
+                + "           ,[Price2])\n"
+                + "     VALUES(?,?,?,?,?,?)";
         try {
             PreparedStatement pre = conn.prepareStatement(sql);
             pre.setString(1, pro.getName());
@@ -36,6 +37,7 @@ public class ProductDAO extends DBConnect {
             pre.setDouble(3, pro.getPrice());
             pre.setInt(4, pro.getQuantity());
             pre.setString(5, pro.getUnit());
+            pre.setDouble(6, pro.getPrice2());
             n = pre.executeUpdate();
         } catch (SQLException e) {
             Logger.getLogger(ProductDAO.class.getName()).log(Level.SEVERE, null, e);
@@ -51,6 +53,7 @@ public class ProductDAO extends DBConnect {
                 + "      ,[Price] = ?"
                 + "      ,[Quantity] = ?"
                 + "      ,[Unit] = ?"
+                + "      ,[Price2] = ?"
                 + " WHERE [MedicineID] = ?";
         try {
             PreparedStatement pre = conn.prepareStatement(sql);
@@ -59,7 +62,8 @@ public class ProductDAO extends DBConnect {
             pre.setDouble(3, pro.getPrice());
             pre.setInt(4, pro.getQuantity());
             pre.setString(5, pro.getUnit());
-            pre.setInt(6, pro.getMedicineID());
+            pre.setDouble(6, pro.getPrice2());
+            pre.setInt(7, pro.getMedicineID());
             n = pre.executeUpdate();
         } catch (SQLException e) {
             Logger.getLogger(ProductDAO.class.getName()).log(Level.SEVERE, null, e);
@@ -96,7 +100,8 @@ public class ProductDAO extends DBConnect {
                 double price = rs.getDouble(4);
                 int quantity = rs.getInt(5);
                 String unit = rs.getString(6);
-                Product pro = new Product(id, nameM, des, price, quantity, unit);
+                double price2 = rs.getDouble(7);
+                Product pro = new Product(id, nameM, des, price, quantity, unit,price2);
                 list.add(pro);
             }
         } catch (SQLException ex) {
