@@ -65,7 +65,7 @@ public class Search extends HttpServlet {
             throws ServletException, IOException {
         ProductDAO dao = new ProductDAO();
         String search = request.getParameter("search");
-        List<Product> list = dao.getAllProduct("select * from Medicines where Name LIKE '%" + search + "%'");
+        List<Product> list = dao.getAllProduct("select * from Medicines where Name LIKE N'%" + search + "%'");
         request.setAttribute("listP", list);
         request.getRequestDispatcher("jsp/manager.jsp").forward(request, response);
     }
