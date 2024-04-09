@@ -6,6 +6,9 @@
             <file>file:/D:/Other/QuanLyThuoc/QuayThuoc/web/jsp/updateProduct.jsp</file>
             <file>file:/D:/Other/QuanLyThuoc/QuayThuoc/web/jsp/insertProduct.jsp</file>
             <file>file:/D:/Other/QuanLyThuoc/QuayThuoc/web/jsp/manager.jsp</file>
+            <file>file:/D:/Other/QuanLyThuoc/QuayThuoc/src/java/Entity/Product.java</file>
+            <file>file:/D:/Other/QuanLyThuoc/QuayThuoc/src/java/Controller/HomeController.java</file>
+            <file>file:/D:/Other/QuanLyThuoc/QuayThuoc/src/java/DAO/ProductDAO.java</file>
             <file>file:/D:/Other/QuanLyThuoc/QuayThuoc/src/java/Controller/Search.java</file>
         </group>
     </open-files>
